@@ -1,6 +1,6 @@
 {
     "name": "mamift/redbean4-laravel5",
-    "description": "A Laravel 5 service provider for Redbean 4",
+    "description": "A Laravel 5 and Lumen compatible service provider for Redbean 4",
     "version": "1.0",
     "authors": [
         {
