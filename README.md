@@ -3,6 +3,12 @@
 
 This is a Laravel 5 and Lumen-compatible package to allow the use of [Redbean PHP ORM](http://redbeanphp.com), version 4.2.
 
+### License - GPL2
+
+As redbeanPHP is itself licensed under GPL2, so is this package.
+
+Please refer to the [GPL 2 license here](https://www.gnu.org/licenses/gpl-2.0.html).
+
 ### Pre-requisites for Lumen
 
 In Lumen, you must enable [dotenv](http://lumen.laravel.com/docs/database#configuration) as it is disabled by default in new Lumen installations (uncomment this line inside app.php):
