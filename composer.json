@@ -17,7 +17,7 @@
         "files": [
             "src/rb.php"
         ],
-        "psr-4": {
+        "psr-0": {
             "Mamift\\Redbean4Laravel5\\": "src/"
         }
     },
