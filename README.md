@@ -15,13 +15,13 @@ In Lumen, you must enable [dotenv](http://lumen.laravel.com/docs/database#config
 	
 	Dotenv::load(__DIR__.'/../');
 	
-Also you must configure a default .env file in both Laravel and Lumen with database connection settings. As a minimum you must have:
+Also you must configure a default .env file in both Laravel and Lumen with database connection settings. As a minimum you must have the following settings configured:
 	
-	DB_CONNECTION=mysql
-	DB_HOST=localhost
-	DB_DATABASE=lumen
-	DB_USERNAME=lumen
-	DB_PASSWORD=lumen1
+	DB_CONNECTION=
+	DB_HOST=
+	DB_DATABASE=
+	DB_USERNAME=
+	DB_PASSWORD=
 
 ### How to install
 
@@ -29,13 +29,13 @@ Add
 	
 	"mamift/redbean4-laravel5":"dev-master" 
 	
-to your composer.json file. Then add this line:
+to your composer.json file. Then run composer update in your Lumne or Laravel app directory. Then add this line:
 
 	$app->register('Mamift\Redbean4Laravel5\Redbean4Laravel5Provider');
 
 to app.php inside the bootstrap/ folder, so RedBeanPHP is setup using Laravel's database settings.
 
-RedBeanPHP will automatically register it's own facade class ("R").
+RedBeanPHP will register it's own facade class ("R"), and you can begin using Redbean using the 'R::' prefix.
 
 ### Usage
 
