@@ -22,8 +22,8 @@ class Redbean4Laravel5Provider extends ServiceProvider {
     public function register()
     {
         // get DB configs from app/config/database.php
-        $default = Laravel\Config::get('database.default');
-        $connections = Laravel\Config::get('database.connections');
+        $default = \Laravel\Config::get('database.default');
+        $connections = \Laravel\Config::get('database.connections');
         
         $db_host = $connections[$default]['host'];
         $db_user = $connections[$default]['username']; 
