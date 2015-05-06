@@ -1,0 +1,25 @@
+{
+    "name": "mamift/redbean4-laravel5",
+    "description": "A Laravel 5 service provider for Redbean 4",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "mamift",
+            "email": "mamift@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": ">=~5.0.0"
+    },
+    "autoload": {
+        "files": [
+            "src/rb.php"
+        ],
+        "psr-4": {
+            "Mamift\\Redbean4Laravel5": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
