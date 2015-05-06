@@ -28,7 +28,7 @@ class Redbean4Laravel5Provider extends ServiceProvider {
         // $connections = Config::get('database.connections');
         // $connections = env()
 
-        var_dump($default);
+        // var_dump($default);
         // var_dump($connections);
 
         // $db_host = $connections[$default]['host'];
