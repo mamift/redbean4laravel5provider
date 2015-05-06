@@ -11,14 +11,14 @@
     "license": "MIT",
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": ">=~5.0.0"
+        "illuminate/support": ">=4.2.0"
     },
     "autoload": {
         "files": [
             "src/rb.php"
         ],
         "psr-4": {
-            "Mamift\\Redbean4Laravel5": "src/"
+            "Mamift\\Redbean4Laravel5\\": "src/"
         }
     },
     "minimum-stability": "dev"
