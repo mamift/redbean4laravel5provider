@@ -14,10 +14,7 @@
         "illuminate/support": ">=4.2.0"
     },
     "autoload": {
-        "files": [
-            "src/rb.php"
-        ],
-        "psr-0": {
+        "psr-4": {
             "Mamift\\Redbean4Laravel5\\": "src/"
         }
     },
