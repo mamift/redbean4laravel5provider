@@ -21,7 +21,7 @@ class Redbean4Laravel5Provider extends ServiceProvider {
      */
     public function register()
     {
-        // get DB configs from app/config/database.php
+        // get DB configs from root .env file
         $default = env('DB_CONNECTION');
 
         $db_host = env('DB_HOST');
@@ -29,7 +29,7 @@ class Redbean4Laravel5Provider extends ServiceProvider {
         $db_pass = env('DB_PASSWORD');
         $db_name = env('DB_DATABASE');
         
-        // run the R::setup command based on db_type
+        // run the R::setup command based on default database type
         if ($default != 'sqlite') {
             $conn_string = $default.':host='.$db_host.';dbname='.$db_name;
         } else {
