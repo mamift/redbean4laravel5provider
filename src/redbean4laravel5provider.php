@@ -21,6 +21,7 @@ class Redbean4Laravel5Provider extends ServiceProvider {
      */
     public function register()
     {
+        define('REDBEAN_MODEL_PREFIX', env('REDBEAN_MODEL_PREFIX'));
 
         // get DB configs from root .env file
         $default = env('DB_CONNECTION');
@@ -38,8 +39,6 @@ class Redbean4Laravel5Provider extends ServiceProvider {
         }
 
         \R::setup($conn_string, $db_user, $db_pass);
-
-        define('REDBEAN_MODEL_PREFIX', env('REDBEAN_MODEL_PREFIX'));
     }
 
 }
