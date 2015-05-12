@@ -29,11 +29,15 @@ Add
 	
 	"mamift/redbean4-laravel5":"dev-master" 
 	
-to your composer.json file. Then run composer update in your Lumne or Laravel app directory. Then add this line:
+to your composer.json file. Then run composer update in your Lumne or Laravel app directory. For Lumen, add this line:
 
 	$app->register('Mamift\Redbean4Laravel5\Redbean4Laravel5Provider');
 
-to app.php inside the bootstrap/ folder, so RedBeanPHP is setup using Laravel's database settings.
+to app.php inside the bootstrap/ folder, so RedBeanPHP is setup using Laravel's database settings. For Laravel 5, add this line:
+
+	'Mamift\Redbean4Laravel5\Redbean4Laravel5Provider',
+
+to the providers array inside config/app.php.
 
 RedBeanPHP will register it's own facade class ("R"), and you can begin using Redbean using the 'R::' prefix.
 
