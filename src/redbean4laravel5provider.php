@@ -38,8 +38,8 @@ class Redbean4Laravel5Provider extends ServiceProvider {
         }
 
         \R::setup($conn_string, $db_user, $db_pass);
-        
-        define('REDBEAN_MODEL_PREFIX', '\\RedBean_Models\\');
+
+        define('REDBEAN_MODEL_PREFIX', env('REDBEAN_MODEL_PREFIX'));
     }
 
 }
