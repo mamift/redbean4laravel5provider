@@ -20,8 +20,9 @@ class Redbean4Laravel5Provider extends ServiceProvider {
      * @return void
      */
     public function register()
-    {
-        if (isset(env('REDBEAN_MODEL_PREFIX'))) {
+    {   
+        $rb_m_p = env('REDBEAN_MODEL_PREFIX');
+        if (isset($rb_m_p)) {
             define('REDBEAN_MODEL_PREFIX', env('REDBEAN_MODEL_PREFIX'));
         }
 
