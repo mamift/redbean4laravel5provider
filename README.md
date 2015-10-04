@@ -1,6 +1,8 @@
 # redbean4-laravel5
 ### A Laravel 5 and Lumen-compatible service provider package for RedBeanPHP ORM 4.2.
 
+NOTE: This is not Laravel 4 compatible.
+
 This is a Laravel 5 and Lumen-compatible package to allow the use of [Redbean PHP ORM](http://redbeanphp.com), version 4.2.
 
 ### License - GPL2
@@ -22,6 +24,12 @@ Also you must configure a default .env file in both Laravel and Lumen with datab
 	DB_DATABASE=
 	DB_USERNAME=
 	DB_PASSWORD=
+
+	DB_CONNECTION determines what type of database you're using (mysql or postresql or whatever)
+	DB_HOST is the name or IP of the database server
+	DB_DATABASE is the name of the database
+	DB_USERNAME is the username used to the connect to the database
+	DB_PASSWORD is the password for the DB_USERNAME
 
 ### How to install
 
