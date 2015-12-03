@@ -33,21 +33,29 @@ Also you must configure a default .env file in both Laravel and Lumen with datab
 
 ### How to install
 
-Add 
+Add this line
 	
 	"mamift/redbean4-laravel5":"dev-master" 
 	
-to your composer.json file. Then run composer update in your Lumne or Laravel app directory. For Lumen, add this line:
+to your composer.json file. Then run composer update in your Lumen or Laravel app directory. 
+
+#### For Lumen 
+
+Add this line:
 
 	$app->register('Mamift\Redbean4Laravel5\Redbean4Laravel5Provider');
 
-to app.php inside the bootstrap/ folder, so RedBeanPHP is setup using Laravel's database settings. For Laravel 5, add this line:
+to app.php inside the bootstrap/ folder, so RedBeanPHP is setup using Lumen's database settings. 
+
+#### For Laravel 5
+
+Add this line
 
 	'Mamift\Redbean4Laravel5\Redbean4Laravel5Provider',
 
 to the providers array inside config/app.php.
 
-RedBeanPHP will register it's own facade class ("R"), and you can begin using Redbean using the 'R::' prefix.
+For both Lumen and Laravel, RedBeanPHP will register it's own facade class ("R"), and you can begin using Redbean using the 'R::' prefix.
 
 ### Usage
 
@@ -56,7 +64,7 @@ Read [RedBeanPHP's documentation](http://redbeanphp.com/crud) for a complete ove
 An example:
 
 	$user = R::dispense('user');
-	$user['description'] = "Lorem ipsum dolor sit amet, consectetur" + adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+	$user['description'] = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis";
 	$user->username = "mamift";
 	$user->gender = R::enum('gender:male');
 	R::store($user);
