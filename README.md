@@ -1,9 +1,9 @@
 # redbean4-laravel5
-### A Laravel 5 and Lumen-compatible service provider package for RedBeanPHP ORM 4.2.
+### A Laravel 5 and Lumen-compatible service provider package for RedBeanPHP ORM 4.3.
 
 NOTE: This is not Laravel 4 compatible.
 
-This is a Laravel 5 and Lumen-compatible package to allow the use of [Redbean PHP ORM](http://redbeanphp.com), version 4.2.
+This is a Laravel 5 and Lumen-compatible package to allow the use of [Redbean PHP ORM](http://redbeanphp.com), version 4.3.
 
 ### License - GPL2
 
