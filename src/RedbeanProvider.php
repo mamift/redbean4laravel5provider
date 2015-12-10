@@ -2,7 +2,7 @@
 
 use Illuminate\Support\ServiceProvider;
 
-class Redbean4Laravel5Provider extends ServiceProvider {
+class RedbeanProvider extends ServiceProvider {
 
     /**
      * Bootstrap the application services.
