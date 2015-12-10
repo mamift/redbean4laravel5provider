@@ -43,7 +43,7 @@ to your composer.json file. Then run composer update in your Lumen or Laravel ap
 
 Add this line:
 
-	$app->register('Mamift\Redbean4Laravel5\Redbean4Laravel5Provider');
+	$app->register('Mamift\Redbean4Laravel5\RedbeanProvider');
 
 to app.php inside the bootstrap/ folder, so RedBeanPHP is setup using Lumen's database settings. 
 
@@ -51,7 +51,7 @@ to app.php inside the bootstrap/ folder, so RedBeanPHP is setup using Lumen's da
 
 Add this line
 
-	\Mamift\Redbean4Laravel5\Redbean4Laravel5Provider::class,
+	\Mamift\Redbean4Laravel5\RedbeanProvider::class,
 
 to the providers array inside config/app.php.
 
