@@ -51,7 +51,7 @@ to app.php inside the bootstrap/ folder, so RedBeanPHP is setup using Lumen's da
 
 Add this line
 
-	'Mamift\Redbean4Laravel5\Redbean4Laravel5Provider',
+	\Mamift\Redbean4Laravel5\Redbean4Laravel5Provider::class,
 
 to the providers array inside config/app.php.
 
