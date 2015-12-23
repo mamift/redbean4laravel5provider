@@ -25,20 +25,20 @@ class RedbeanProvider extends ServiceProvider {
 
         // get DB configs from root .env file
         $default = env('DB_CONNECTION');
-
-        $db_host = env('DB_HOST');
-        $db_user = env('DB_USERNAME');
-        $db_pass = env('DB_PASSWORD');
         $db_name = env('DB_DATABASE');
         
         // run the R::setup command based on default database type
         if ($default != 'sqlite') {
+            $db_host = env('DB_HOST');
+            $db_user = env('DB_USERNAME');
+            $db_pass = env('DB_PASSWORD');
             $conn_string = $default.':host='.$db_host.';dbname='.$db_name;
+            \R::setup($conn_string, $db_user, $db_pass);
         } else {
             $conn_string = $default.':'.$db_name;
+            \R::setup($conn_string);
         }
 
-        \R::setup($conn_string, $db_user, $db_pass);
     }
 
 }
