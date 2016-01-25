@@ -33,9 +33,11 @@ class RedbeanProvider extends ServiceProvider {
             $db_user = env('DB_USERNAME');
             $db_pass = env('DB_PASSWORD');
             $conn_string = $default.':host='.$db_host.';dbname='.$db_name;
+            if (\R::testConnection()) return;
             \R::setup($conn_string, $db_user, $db_pass);
         } else {
             $conn_string = $default.':'.$db_name;
+            if (\R::testConnection()) return;
             \R::setup($conn_string);
         }
 
