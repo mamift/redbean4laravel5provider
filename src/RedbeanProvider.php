@@ -36,7 +36,7 @@ class RedbeanProvider extends ServiceProvider {
             if (\R::testConnection()) return;
             \R::setup($conn_string, $db_user, $db_pass);
         } else {
-            $conn_string = $default.':'.database_path().DIRECTORY_SEPARATOR.env('DB_DATABASE').'.sqlite';
+            $conn_string = $default.':'.database_path().DIRECTORY_SEPARATOR.'database.sqlite';
             if (\R::testConnection()) return;
             \R::setup($conn_string);
         }
