@@ -30,13 +30,14 @@ class RedbeanProvider extends ServiceProvider {
         // run the R::setup command based on default database type
         if ($default != 'sqlite') {
             $db_host = env('DB_HOST');
+            $db_port = env('DB_PORT');
             $db_user = env('DB_USERNAME');
             $db_pass = env('DB_PASSWORD');
-            $conn_string = $default.':host='.$db_host.';dbname='.$db_name;
+            $conn_string = $default . ':host=' . $db_host . ';port=' . $db_port . ';dbname=' . $db_name;
             if (\R::testConnection()) return;
             \R::setup($conn_string, $db_user, $db_pass);
         } else {
-            $conn_string = $default.':'.database_path().DIRECTORY_SEPARATOR.'database.sqlite';
+            $conn_string = $default . ':' . database_path() . DIRECTORY_SEPARATOR . 'database.sqlite';
             if (\R::testConnection()) return;
             \R::setup($conn_string);
         }
