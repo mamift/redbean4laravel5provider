@@ -21,7 +21,11 @@ class RedbeanProvider extends ServiceProvider {
      */
     public function register()
     {   
-        // $rb_m_p = env('REDBEAN_MODEL_PREFIX');
+        $rb_m_p = env('REDBEAN_MODEL_PREFIX');
+
+        if (!empty($rb_m_p)) {
+            define('REDBEAN_MODEL_PREFIX', $rb_m_p);
+        }
 
         // get DB configs from root .env file
         $default = env('DB_CONNECTION');
