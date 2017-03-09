@@ -71,8 +71,6 @@ An example:
 
 ### A note on how this package exposes RedBean in Laravel
 
-Due to the way the author of RedBean uses PHP namespaces (it doesn't appear to be PSR-4 compliant), he does not provide his own composer.json and as such, the rb.php file (the file that RedBeanPHP is commonly distributed in) does not appear to be autoloadable by composer.
-
 What this package does is load rb.php for each request. Under the "autoload" JSON object inside composer.json, rb.php is specified as part of the "files" array:
 
 	{
